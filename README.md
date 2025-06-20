@@ -83,9 +83,10 @@ Thank you so much for considering helping out! 😊
 
 License 📜
 
-This project is open-source and uses the MIT License. This means you're free to use, modify, and share this code! See the LICENSE file for all the details. (You might want to create a LICENSE file in your project folder if you don't have one!)
+This project is open-source and uses the MIT License. This means you're free to use, modify, and share this code! See the LICENSE file for all the details.
 
 Let's Connect! (Contact) 📧
+
 Got questions or just want to chat about coding? Feel free to reach out!
 
 Name:Faran Inam 
