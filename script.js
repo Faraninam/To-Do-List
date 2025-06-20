@@ -77,9 +77,39 @@ function renderTodos() {
     });
 }
 
-// Allow Enter key to add todos
+// Theme Toggle Logic
 document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('todoInput');
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Function to set the theme
+    function setTheme(isDark) {
+        if (isDark) {
+            body.classList.add('dark-theme');
+            themeToggle.textContent = 'Toggle Light Mode';
+        } else {
+            body.classList.remove('dark-theme');
+            themeToggle.textContent = 'Toggle Dark Mode';
+        }
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+
+    // Check for saved theme preference on page load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        setTheme(savedTheme === 'dark');
+    } else {
+        // Optional: Check user's system preference (prefers-color-scheme)
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setTheme(prefersDark);
+    }
+
+    // Event listener for the toggle button
+    themeToggle.addEventListener('click', () => {
+        const isCurrentlyDark = body.classList.contains('dark-theme');
+        setTheme(!isCurrentlyDark);
+    });
     
     input.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
