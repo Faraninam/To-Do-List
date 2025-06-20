@@ -90,6 +90,7 @@ Let's Connect! (Contact) 📧
 Got questions or just want to chat about coding? Feel free to reach out!
 
 Name:Faran Inam 
+
 Email:faraninam.dev@gmail.com
 
 Project Link: https://github.com/Faraninam/todo-list
