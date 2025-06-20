@@ -1,13 +1,59 @@
+/* Default (Light Theme) Variables */
+:root {
+    --body-bg: #ffffff;
+    --todo-container-bg: #dbdbdb;
+    --h1-color: #333;
+    --input-border-color: #ddd;
+    --input-focus-border-color: #007bff;
+    --button-bg: #007bff;
+    --button-hover-bg: #0056b3;
+    --button-text-color: white;
+    --todo-item-bg: #f8f9fa;
+    --todo-item-hover-bg: #e9ecef;
+    --todo-item-border-left: #007bff;
+    --todo-item-completed-border-left: #28a745;
+    --delete-btn-bg: #dc3545;
+    --delete-btn-hover-bg: #c82333;
+    --empty-state-color: #6c757d;
+    --theme-toggle-bg: #6c757d;
+    --theme-toggle-hover-bg: #5a6268;
+}
+
+/* Dark Theme Variables */
+body.dark-theme {
+    --body-bg: #2c2c2c; /* Darker background */
+    --todo-container-bg: #444444; /* Darker container */
+    --h1-color: #f0f0f0; /* Light text for headings */
+    --input-border-color: #555;
+    --input-focus-border-color: #66b3ff;
+    --button-bg: #4CAF50; /* Green for add button */
+    --button-hover-bg: #45a049;
+    --button-text-color: white;
+    --todo-item-bg: #555555; /* Darker todo item background */
+    --todo-item-hover-bg: #666666;
+    --todo-item-border-left: #4CAF50; /* Green border for active tasks */
+    --todo-item-completed-border-left: #77c27a; /* Lighter green for completed */
+    --delete-btn-bg: #e74c3c; /* Red for delete button */
+    --delete-btn-hover-bg: #c0392b;
+    --empty-state-color: #bbb;
+    --theme-toggle-bg: #007bff; /* Blue for toggle button */
+    --theme-toggle-hover-bg: #0056b3;
+}
+
+
+/* General Styling - Use variables */
 body {
     font-family: Arial, sans-serif;
     max-width: 500px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: var(--body-bg); /* Use variable */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    color: var(--h1-color); /* Default text color */
 }
 
 .todo-container {
-    background: #ffffff;
+    background: var(--todo-container-bg); /* Use variable */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -15,7 +61,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #333;
+    color: var(--h1-color); /* Use variable */
     margin-bottom: 30px;
 }
 
@@ -28,21 +74,23 @@ h1 {
 input[type="text"] {
     flex: 1;
     padding: 12px;
-    border: 2px solid #ddd;
+    border: 2px solid var(--input-border-color); /* Use variable */
     border-radius: 6px;
     font-size: 16px;
     outline: none;
     transition: border-color 0.3s;
+    background-color: var(--body-bg); /* Match body background */
+    color: var(--h1-color); /* Match text color */
 }
 
 input[type="text"]:focus {
-    border-color: #007bff;
+    border-color: var(--input-focus-border-color); /* Use variable */
 }
 
 button {
     padding: 12px 20px;
-    background: #007bff;
-    color: white;
+    background: var(--button-bg); /* Use variable */
+    color: var(--button-text-color); /* Use variable */
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -51,29 +99,30 @@ button {
 }
 
 button:hover {
-    background: #0056b3;
+    background: var(--button-hover-bg); /* Use variable */
 }
 
 .todo-item {
-    background: #f8f9fa;
+    background: var(--todo-item-bg); /* Use variable */
     padding: 15px;
     margin: 10px 0;
     border-radius: 6px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-left: 4px solid #007bff;
+    border-left: 4px solid var(--todo-item-border-left); /* Use variable */
     transition: all 0.3s;
+    color: var(--h1-color); /* Ensure todo text is readable */
 }
 
 .todo-item:hover {
-    background: #e9ecef;
+    background: var(--todo-item-hover-bg); /* Use variable */
 }
 
 .todo-item.completed {
     text-decoration: line-through;
     opacity: 0.6;
-    border-left-color: #28a745;
+    border-left-color: var(--todo-item-completed-border-left); /* Use variable */
 }
 
 .todo-text {
@@ -84,19 +133,36 @@ button:hover {
 }
 
 .delete-btn {
-    background: #dc3545;
+    background: var(--delete-btn-bg); /* Use variable */
     padding: 8px 12px;
     font-size: 14px;
     margin-left: 10px;
 }
 
 .delete-btn:hover {
-    background: #c82333;
+    background: var(--delete-btn-hover-bg); /* Use variable */
 }
 
 .empty-state {
     text-align: center;
-    color: #6c757d;
+    color: var(--empty-state-color); /* Use variable */
     font-style: italic;
     margin-top: 30px;
+}
+
+/* New: Theme Toggle Button Specific Style */
+.theme-toggle-btn {
+    display: block;
+    margin: 0 auto 20px auto; /* Center the button and add space below */
+    background-color: var(--theme-toggle-bg);
+    color: var(--button-text-color);
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    background-color: var(--theme-toggle-hover-bg);
 }
