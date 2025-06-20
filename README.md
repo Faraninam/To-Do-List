@@ -93,4 +93,4 @@ Name:Faran Inam
 
 Email:faraninam.dev@gmail.com
 
-Project Link: https://github.com/Faraninam/todo-list
+Project Link: https://github.com/Faraninam/To-Do-list
