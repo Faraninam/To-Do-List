@@ -14,15 +14,15 @@ __🌟 Features:__
 
 __📁 Files Included:__
 
-- index.html — Main HTML structure
+- `index.html` — Main HTML structure
 
-- styles.css — Styling for the application
+- `styles.css` — Styling for the application
 
-- script.js — JavaScript logic for task management
+- `script.js` — JavaScript logic for task management
 
 __🚀 How to Use:__
 
-- Open index.html in a web browser
+- Open `index.html` in a web browser
 
 - Type your task in the input field
 
