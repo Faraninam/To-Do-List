@@ -55,7 +55,7 @@ body {
     max-width: 400px;
     margin: 40px auto;
     padding: 20px;
-    background: #fff;
+    background: var(--todo-container-bg); /* Use variable for theme support */
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
